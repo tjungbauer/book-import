@@ -5,7 +5,7 @@ metadata:
     name: book-import
   name: book-import
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       name: book-import
