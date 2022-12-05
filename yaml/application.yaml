@@ -23,15 +23,15 @@ spec:
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: ggithubcom-tjungbauer-book-impor-ns
+  name: ggithubcom-tjungbauer-book-import-ns
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: Channel
 metadata:
   annotations:
     apps.open-cluster-management.io/reconcile-rate: medium
-  name: ggithubcom-tjungbauer-book-impor
-  namespace: ggithubcom-tjungbauer-book-impor-ns
+  name: ggithubcom-tjungbauer-book-import
+  namespace: ggithubcom-tjungbauer-book-import-ns
 spec:
   type: Git
   pathname: 'https://github.com/tjungbauer/book-import.git'
@@ -48,7 +48,7 @@ metadata:
   name: book-import-subscription-1
   namespace: book-import
 spec:
-  channel: ggithubcom-tjungbauer-book-impor-ns/ggithubcom-tjungbauer-book-impor
+  channel: ggithubcom-tjungbauer-book-import-ns/ggithubcom-tjungbauer-book-import
   placement:
     placementRef:
       kind: PlacementRule
